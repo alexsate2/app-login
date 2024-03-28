@@ -2,7 +2,7 @@
 
 export const config = {
   runtime: 'edge',
-  regions: ['sin1', 'hnd1'],
+ // regions: ['sin1', 'hnd1'],
 }
 
 declare const EdgeRuntime: any;
