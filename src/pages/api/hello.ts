@@ -8,7 +8,10 @@ declare const EdgeRuntime: any;
 
 export default function handler() {
   return Response.json(
-    { name: "API Edge Runtime" 
-    ,isEdge: typeof EdgeRuntime !== 'string' ? false : true
- });
+    {
+      name: "API Edge Runtime",
+      region: ""+process.env.VERCEL_REGION,
+      isEdge: typeof EdgeRuntime !== 'string' ? false : true,
+      process: process,
+    });
 }
