@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export const config = {
-  runtime: 'edge'
+  runtime: 'edge',
+  regions: ['sin1', 'hnd1'],
 }
 
 declare const EdgeRuntime: any;
