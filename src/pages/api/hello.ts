@@ -4,6 +4,7 @@ export const config = {
   runtime: 'edge',
  // regions: ['sin1', 'hnd1'],
 }
+export const maxDuration = 2;
 
 declare const EdgeRuntime: any;
 
