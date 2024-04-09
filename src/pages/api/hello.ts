@@ -11,11 +11,12 @@ declare const EdgeRuntime: any;
 export default async function handler(request: Request) {
 
 
-  
+  request.headers.set("X-Your-Custom-Header", "Your custom header value");
   if (request.headers.get("no-external-request")) {
     return Response.json({ name: "API Edge Runtime. no external request.", 
     region: ""+process.env.VERCEL_REGION, 
     isEdge: typeof EdgeRuntime !== 'string' ? false : true,
+    ip: request.headers.get("x-forwarded-for"),
      process: process });
   }
 
